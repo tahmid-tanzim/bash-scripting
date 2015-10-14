@@ -8,7 +8,7 @@
 # $ chmod +x replace-spaces.sh
 # $ ./replace-spaces.sh
 
-RESOURCE_DIR="/home/tanzim/Desktop/Test"
+RESOURCE_DIR="$HOME/Desktop/Test"
 
 if [ -d "$RESOURCE_DIR" ]; then # Check RESOURCE DIRECTORY existence.
 	find $RESOURCE_DIR -depth -name "* *" -execdir rename 's/ /_/g' "{}" \;
