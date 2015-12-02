@@ -39,14 +39,16 @@ Bash version(s)
 * `$ echo {A..Z..2}`
 * `$ echo {A..z}`
 * `$ touch {apple,banana,cherry,durian}_{01..100}{w..d}`
-* Word count ~ `$ ls -1 | wc -l`
+* Word count
+  `$ ls -1 | wc -l`
 
 ### 4. Redirection
 * `$ ls | more`
 * `$ cp -v * ../otherFolder &> ../log.txt`
 
 ### 5. *grep* - Print lines matching a pattern
-Enable grep color option auto - `$ export GREP_OPTIONS='--color=auto'`
+Enable grep color option auto - 
+  `$ export GREP_OPTIONS='--color=auto'`
 - Search POST request from Log file
   `$ grep --color=auto POST development.log`
 - Case insensitive search
@@ -56,5 +58,23 @@ Enable grep color option auto - `$ export GREP_OPTIONS='--color=auto'`
   ```
   Started GET "/rails/mailers/member_mailer/account_activation" for 127.0.0.1 at 2015-11-30 15:38:21 +0600
   ```
-  `$ grep -i get development.log | awk {'print $7'}`
-  `$ ping -c 1 example.com`
+  - `$ grep -i get development.log | awk {'print $7'}`
+  - `$ ping -c 1 example.com`
+
+### 6. Displaying text with 'echo'
+```
+#!/bin/bash
+# This is a basic bash script.
+greetings="hello"
+
+echo $greetings, world \(planet\)!
+# OUTPUT: hello, world (planet)!
+
+echo '$greetings, world (planet)!'
+# OUTPUT: $greetings, world (planet)!
+
+echo "$greetings, world (planet)!"
+# OUTPUT: hello, world (planet)!
+```
+
+### 7. Working with variables
