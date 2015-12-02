@@ -63,8 +63,6 @@ Enable grep color option auto -
 
 ### 6. Displaying text with 'echo'
 ```
-#!/bin/bash
-# This is a basic bash script.
 greetings="hello"
 
 echo $greetings, world \(planet\)!
@@ -137,3 +135,7 @@ echo $0
 More [Internal Variables](http://tldp.org/LDP/abs/html/internalvariables.html)
 
 ### 8. Command Substitution
+```
+a=$(ping -c 1 example.com | grep 'bytes from' | cut -d = -f 4)
+echo "The ping was $a"
+```
