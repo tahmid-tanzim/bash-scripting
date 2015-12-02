@@ -131,12 +131,3 @@ echo "The ping was $a"```
 
 ### 9. Arithmetic operations
 ```val=$(( expression ))```
-
-Operation | Operator
---------- | ---------
-Exponentiation | $a ** $b
-Multiplication | $a * $b
-Division | $a / $b
-Modulo | $a % $b
-Addition | $a + $b
-Subtraction | $a - $b
