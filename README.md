@@ -55,9 +55,9 @@ Enable grep color option auto -
   `$ grep -i post development.log`
 - Extract specific item with awk. 
   For e.g. date from
-  ```
-  Started GET "/rails/mailers/member_mailer/account_activation" for 127.0.0.1 at 2015-11-30 15:38:21 +0600
-  ```
+    ```
+    Started GET "/rails/mailers/member_mailer/account_activation" for 127.0.0.1 at 2015-11-30 15:38:21 +0600
+    ```
   - `$ grep -i get development.log | awk {'print $7'}`
   - `$ ping -c 1 example.com`
 
@@ -78,3 +78,62 @@ echo "$greetings, world (planet)!"
 ```
 
 ### 7. Working with variables
+```
+#!/bin/bash
+# This is a basic bash script.
+a=Hello
+b="Good Morning"
+c=14
+
+echo $a
+# OUTPUT: Hello
+
+echo $b
+# OUTPUT: Good Morning
+
+echo $c
+# OUTPUT: 14
+
+echo "$b!, I have $c apples"
+# OUTPUT: Good Morning!, I have 14 apples
+```
+#### 7.1 Adding attributes to variables
+```
+# d is an integer
+declare -i d=123
+
+# e is read-only
+declare -r e=456
+
+# f is lolcats
+declare -l f="LOLCats"
+
+# g is LOLCATS
+declare -u g="LOLCats"
+```
+#### 7.2 Built-in variables
+```
+# Returns user home directory
+echo $HOME
+
+# Returns current directory
+echo $PWD
+
+# Returns machine type
+echo $MACHTYPE
+
+# Returns system name
+echo $HOSTNAME
+
+# Returns version of Bash
+echo $BASH_VERSION
+
+# Returns the number of seconds the Bash session has run
+echo $SECONDS
+
+# Returns the name of the script
+echo $0
+```
+More [Internal Variables](http://tldp.org/LDP/abs/html/internalvariables.html)
+
+### 8. Command Substitution
