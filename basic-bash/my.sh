@@ -2,5 +2,21 @@
 #!/bin/bash
 # This is a basic bash script.
 
-a=$(ping -c 1 example.com | grep 'bytes from' | cut -d = -f 4)
-echo "The ping was $a"
+[[ "cat" == "cat" ]]
+# OUTPUT: 0 (TRUE)
+echo $?
+
+[[ "cat" = "dog" ]]
+# OUTPUT: 1 (FALSE)
+echo $?
+
+[[ 20 -gt 100 ]]
+# OUTPUT: 1 (FALSE)
+echo $?
+
+a=""
+b="cat"
+
+[[ -z $a && -n $b ]]
+# OUTPUT: 0 (TRUE)
+echo $?

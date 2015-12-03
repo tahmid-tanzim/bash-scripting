@@ -145,7 +145,7 @@ val=$(( expression ))
 1: FALSE
 0: TRUE
 ```
-
+##### 10.1. Conditional Operators in BASH
 |         Operation        | Operator for String | Operator for Integer |
 |:-------------------------|:-------------------:|:--------------------:|
 | Less than                |    [[ $a < $b ]]    |    [[ $a -lt $b ]]   |
@@ -154,3 +154,41 @@ val=$(( expression ))
 | Greater than or equal to |    [[ $a >= $b ]]   |    [[ $a -ge $b ]]   |
 | Equal                    |    [[ $a == $b ]]   |    [[ $a -eq $b ]]   |
 | Not Equal                |    [[ $a != $b ]]   |    [[ $a -ne $b ]]   |
+
+Example:
+```
+[[ "cat" == "cat" ]]
+# OUTPUT: 0 (TRUE)
+echo $?
+
+[[ "cat" = "dog" ]]
+# OUTPUT: 1 (FALSE)
+echo $?
+
+[[ 20 -gt 100 ]]
+# OUTPUT: 1 (FALSE)
+echo $?
+```
+
+##### 10.2. Logical Operators in BASH
+|  Operation  |    Operator    |
+|:------------|:--------------:|
+| Logical AND | [[ $a && $b ]] |
+| Logical OR  | [[ $a || $b ]] |
+| Logical NOT |   [[ ! $a ]]   |
+
+##### 10.3. String *null* value
+|    Operation   |   Operator  |
+|:---------------|:-----------:|
+| Is *null*?     | [[ -z $a ]] |
+| Is not *null*? | [[ -n $a ]] |
+
+Example
+```
+a=""
+b="cat"
+
+[[ -z $a && -n $b ]]
+# OUTPUT: 0 (TRUE)
+echo $?
+```
