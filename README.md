@@ -70,8 +70,8 @@ echo '$greetings, world (planet)!'
 # OUTPUT: $greetings, world (planet)!
 
 echo "$greetings, world (planet)!"
-# OUTPUT: hello, world (planet)!```
-
+# OUTPUT: hello, world (planet)!
+```
 ### 7. Working with variables
 ```#!/bin/bash
 # This is a basic bash script.
@@ -89,7 +89,8 @@ echo $c
 # OUTPUT: 14
 
 echo "$b!, I have $c apples"
-# OUTPUT: Good Morning!, I have 14 apples```
+# OUTPUT: Good Morning!, I have 14 apples
+```
 ##### 7.1 Adding attributes to variables
 ```# d is an integer
 declare -i d=123
@@ -101,7 +102,8 @@ declare -r e=456
 declare -l f="LOLCats"
 
 # g is LOLCATS
-declare -u g="LOLCats"```
+declare -u g="LOLCats"
+```
 ##### 7.2 Built-in variables
 ```# Returns user home directory
 echo $HOME
@@ -122,20 +124,25 @@ echo $BASH_VERSION
 echo $SECONDS
 
 # Returns the name of the script
-echo $0```
+echo $0
+```
 More [Internal Variables](http://tldp.org/LDP/abs/html/internalvariables.html)
 
 ### 8. Command Substitution
 ```a=$(ping -c 1 example.com | grep 'bytes from' | cut -d = -f 4)
-echo "The ping was $a"```
+echo "The ping was $a"
+```
 
 ### 9. Arithmetic operations
-```val=$(( expression ))```
+```
+val=$(( expression ))
+```
 
 ### 10. Comparison operations
 ```[[ expression ]]
 1: FALSE
-0: TRUE```
+0: TRUE
+```
 
 | Operation                | Operator for String | Operator for Integer |
 |:------------------------ |:-------------------:|:--------------------:|
