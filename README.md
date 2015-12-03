@@ -59,9 +59,9 @@ Enable grep color option auto -
     - ```Started GET "/rails/mailers/member_mailer/account_activation" for 127.0.0.1 at 2015-11-30 15:38:21 +0600```
   - `$ grep -i get development.log | awk {'print $7'}`
   - `$ ping -c 1 example.com`
-
 ### 6. Displaying text with 'echo'
-```greetings="hello"
+```
+greetings="hello"
 
 echo $greetings, world \(planet\)!
 # OUTPUT: hello, world (planet)!
@@ -92,7 +92,8 @@ echo "$b!, I have $c apples"
 # OUTPUT: Good Morning!, I have 14 apples
 ```
 ##### 7.1 Adding attributes to variables
-```# d is an integer
+```
+# d is an integer
 declare -i d=123
 
 # e is read-only
@@ -105,7 +106,8 @@ declare -l f="LOLCats"
 declare -u g="LOLCats"
 ```
 ##### 7.2 Built-in variables
-```# Returns user home directory
+```
+# Returns user home directory
 echo $HOME
 
 # Returns current directory
@@ -129,37 +131,26 @@ echo $0
 More [Internal Variables](http://tldp.org/LDP/abs/html/internalvariables.html)
 
 ### 8. Command Substitution
-```a=$(ping -c 1 example.com | grep 'bytes from' | cut -d = -f 4)
+```
+a=$(ping -c 1 example.com | grep 'bytes from' | cut -d = -f 4)
 echo "The ping was $a"
 ```
-
 ### 9. Arithmetic operations
 ```
 val=$(( expression ))
 ```
-
 ### 10. Comparison operations
-```[[ expression ]]
+```
+[[ expression ]]
 1: FALSE
 0: TRUE
 ```
 
-| Operation                | Operator for String | Operator for Integer |
-|:------------------------ |:-------------------:|:--------------------:|
-| Less than                | [[ $a < $b ]]       | [[ $a -lt $b ]]      |
-| Greater than             | [[ $a > $b ]]       | [[ $a -gt $b ]]      |
-| Less than or equal to    | [[ $a <= $b ]]      | [[ $a -le $b ]]      |
-| Greater than or equal to | [[ $a >= $b ]]      | [[ $a -ge $b ]]      |
-| Equal                    | [[ $a == $b ]]      | [[ $a -eq $b ]]      |
-| Not Equal                | [[ $a != $b ]]      | [[ $a -ne $b ]]      |
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+|         Operation        | Operator for String | Operator for Integer |
+|:------------------------:|:-------------------:|:--------------------:|
+| Less than                |    [[ $a < $b ]]    |    [[ $a -lt $b ]]   |
+| Greater than             |    [[ $a > $b ]]    |    [[ $a -gt $b ]]   |
+| Less than or equal to    |    [[ $a <= $b ]]   |    [[ $a -le $b ]]   |
+| Greater than or equal to |    [[ $a >= $b ]]   |    [[ $a -ge $b ]]   |
+| Equal                    |    [[ $a == $b ]]   |    [[ $a -eq $b ]]   |
+| Not Equal                |    [[ $a != $b ]]   |    [[ $a -ne $b ]]   |
