@@ -131,3 +131,28 @@ echo "The ping was $a"```
 
 ### 9. Arithmetic operations
 ```val=$(( expression ))```
+
+### 10. Comparison operations
+```[[ expression ]]
+1: FALSE
+0: TRUE```
+
+| Operation                | Operator for String | Operator for Integer |
+|:------------------------ |:-------------------:|:--------------------:|
+| Less than                | [[ $a < $b ]]       | [[ $a -lt $b ]]      |
+| Greater than             | [[ $a > $b ]]       | [[ $a -gt $b ]]      |
+| Less than or equal to    | [[ $a <= $b ]]      | [[ $a -le $b ]]      |
+| Greater than or equal to | [[ $a >= $b ]]      | [[ $a -ge $b ]]      |
+| Equal                    | [[ $a == $b ]]      | [[ $a -eq $b ]]      |
+| Not Equal                | [[ $a != $b ]]      | [[ $a -ne $b ]]      |
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
