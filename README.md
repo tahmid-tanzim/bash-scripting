@@ -147,7 +147,7 @@ val=$(( expression ))
 ```
 
 |         Operation        | Operator for String | Operator for Integer |
-|:------------------------:|:-------------------:|:--------------------:|
+|:-------------------------|:-------------------:|:--------------------:|
 | Less than                |    [[ $a < $b ]]    |    [[ $a -lt $b ]]   |
 | Greater than             |    [[ $a > $b ]]    |    [[ $a -gt $b ]]   |
 | Less than or equal to    |    [[ $a <= $b ]]   |    [[ $a -le $b ]]   |
